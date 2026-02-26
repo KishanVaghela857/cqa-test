@@ -23,12 +23,12 @@ jobs:
         run: |
           echo "Triggering test execution for Test Plan ID: $TEST_PLAN_ID"
 
-          API_URL="https://server.contextqa.com/test_plans/$TEST_PLAN_ID/execution?apk_build_url=$APK_BUILD_URL&ipa_build_url=$IPA_BUILD_URL"
+          API_URL="https://server.contextqa.com/test_plans/21/execution?apk_build_url=$APK_BUILD_URL&ipa_build_url=$IPA_BUILD_URL"
 
           echo "Calling API: $API_URL"
 
           RESPONSE=$(curl -s -w "%{http_code}" --location "$API_URL" \
-            --header "token: $TOKEN"
+            --header "token: zmwtIPgcAVrDGpCQiS+9BA=="
           )
 
           HTTP_CODE="${RESPONSE: -3}"
@@ -66,7 +66,7 @@ jobs:
 
           while [ "$STATUS" != "STATUS_COMPLETED" ]; do
             sleep 30
-            RESPONSE=$(curl -s --location "https://server.contextqa.com/test_plan_results/$JOB_ID/results" \
+            RESPONSE=$(curl -s --location "https://server.contextqa.com/test_plan_results/21/results" \
               --header "token: $TOKEN")
 
             RESULT=$(echo $RESPONSE | jq -r '.result')
