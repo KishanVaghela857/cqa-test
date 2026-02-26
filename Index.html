@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+        section {
+            margin: 40px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Website</h1>
+</header>
+
+<section>
+    <h2>Hello 👋</h2>
+    <p>This is a simple HTML page example.</p>
+    <button onclick="showMessage()">Click Me</button>
+</section>
+
+<footer>
+    <p>© 2026 My Website</p>
+</footer>
+
+<script>
+    function showMessage() {
+        alert("Button clicked successfully!");
+    }
+</script>
+
+</body>
+</html>
