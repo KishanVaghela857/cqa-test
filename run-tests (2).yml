@@ -15,7 +15,7 @@ jobs:
 
       - name: Set Test Variables
         run: |
-          echo "TEST_PLAN_ID=X" >> $GITHUB_ENV
+          echo "TEST_PLAN_ID=18" >> $GITHUB_ENV
           echo "TOKEN=X" >> $GITHUB_ENV
 
       - name: Trigger Test Plan Execution (Start Test Run)
